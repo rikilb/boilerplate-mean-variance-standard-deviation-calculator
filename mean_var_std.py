@@ -1,10 +1,10 @@
 import numpy as np
 
 def calculate(list):
-    if len(list) < 9 :
-        raise ValueError("List must contain nine numbers.")
+    if len(list) < 9 :  #Check if the list contains nine numbers, otherwise raise a ValueError.
+        raise ValueError("List must contain nine numbers.") 
 
-    matrix = np.array(list).reshape(3,3)
+    matrix = np.array(list).reshape(3,3) #Convert the list into a 3x3 NumPy matrix.
     calculations = {
         "mean" : [np.mean(matrix, axis=0).tolist(),np.mean(matrix, axis=1).tolist(), float(np.mean(matrix))],
         "variance" : [np.var(matrix, axis=0).tolist(),np.var(matrix, axis=1).tolist(), float(np.var(matrix))],
